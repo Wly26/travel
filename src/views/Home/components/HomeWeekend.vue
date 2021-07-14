@@ -2,7 +2,7 @@
 <div>
     <div class="title">周末去哪儿</div>
     <ul>
-        <li class="item border-bottom" v-for="item of homeWeekendList" :key="item.id">
+        <li class="item border-bottom" v-for="item of list" :key="item.id">
             <div class="item-img-wrapper">
                 <img class="item-img" :src="item.imgUrl"/>
             </div>
@@ -18,21 +18,24 @@
 <script>
 export default {
   name: 'HomeWeekend',
-  data() {
-    return {
-        homeWeekendList: [{
-            id: '0001',
-            imgUrl:'',
-            title:'海洋世界',
-            desc:'内容1内容1内容1内容1内容1内容1内容1内容1内容1内容1内容1内容1'
-        },{
-            id: '0002',
-            imgUrl:'',
-            title:'动物世界',
-            desc:'内容2内容2内容2内容2内容2内容2内容2内容2内容2内容2内容2内容2'
-        }]
-    }
-  }
+  props: {
+    list: Array
+  },
+  // data() {
+  //   return {
+  //       homeWeekendList: [{
+  //           id: '0001',
+  //           imgUrl:'',
+  //           title:'海洋世界',
+  //           desc:'内容1内容1内容1内容1内容1内容1内容1内容1内容1内容1内容1内容1'
+  //       },{
+  //           id: '0002',
+  //           imgUrl:'',
+  //           title:'动物世界',
+  //           desc:'内容2内容2内容2内容2内容2内容2内容2内容2内容2内容2内容2内容2'
+  //       }]
+  //   }
+  // }
 }
 </script>
 
