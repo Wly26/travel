@@ -3,7 +3,7 @@
   <home-swiper :list="swiperList"></home-swiper>
   <home-icons :list="iconList"></home-icons>
   <home-recommend :list="recommendList"></home-recommend>
-  <home-weekend :list="HomeWeekend"></home-weekend>
+  <home-weekend :list="weekendList"></home-weekend>
 </template>
 
 <script>
@@ -36,7 +36,7 @@ export default {
         .then(this.getHomeInfoSucc)
     },
     getHomeInfoSucc(res) {
-      // console.log(res)
+      console.log(res)
       res = res.data
       if (res.ret && res.data) {
         const data = res.data
